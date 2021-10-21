@@ -107,7 +107,7 @@ public class RecipeReader extends AppCompatActivity implements View.OnClickListe
                count++;
            } else {
                if (judg.contains("前")) {
-                   count = count-1;
+                   count--;
                } else {
                    if (judg.contains("もう一度")) {
                    }
