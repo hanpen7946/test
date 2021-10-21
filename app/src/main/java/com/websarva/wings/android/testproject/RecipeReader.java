@@ -124,7 +124,6 @@ public class RecipeReader extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.JAPAN.toString());
                 intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 100);
                 intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "操作を選んでください\n次・戻る・もう一度");
-                // インテント発行
                 startActivityForResult(intent, REQUEST_CODE);
             }
 
@@ -133,12 +132,10 @@ public class RecipeReader extends AppCompatActivity implements View.OnClickListe
         super.onActivityResult(requestCode, resultCode, data);
 
         if(requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
-            // 認識結果を ArrayList で取得
-            ArrayList<String> candidates =
-                    data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+            // 認識結果を取得
+            ArrayList<String> candidates = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
             if(candidates.size() > 0) {
-                // 認識結果候補で一番有力なものを表示
                 judg = candidates.get(0);
                 speech();
             }
