@@ -25,7 +25,6 @@ public class MakeDialog extends DialogFragment {
         @Override
         public void onClick(DialogInterface dialog, int which) {
             String filepath = getArguments().getString("filepath", "");
-            MainActivity ma = new MainActivity();
         switch (which){
             case DialogInterface.BUTTON_POSITIVE:
                 Intent intent_rr = new Intent(getContext(),RecipeReader.class);

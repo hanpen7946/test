@@ -2,16 +2,13 @@ package com.websarva.wings.android.testproject;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -111,7 +108,7 @@ public class FileEditer extends AppCompatActivity {
         File newfile = new File(fileurl);
         try {
             // FileWriterクラスのオブジェクトを生成する
-            FileWriter fw = new FileWriter(fileurl, true);
+            FileWriter fw = new FileWriter(newfile, true);
             // PrintWriterクラスのオブジェクトを生成する
             PrintWriter pw = new PrintWriter(new BufferedWriter(fw));
             //ファイルに追記する

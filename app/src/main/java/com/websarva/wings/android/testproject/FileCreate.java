@@ -2,20 +2,14 @@ package com.websarva.wings.android.testproject;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -99,7 +93,7 @@ public class FileCreate extends AppCompatActivity {
         } catch (IOException e) {
             Toast.makeText(FileCreate.this, "ファイル保存に失敗しました", Toast.LENGTH_LONG).show();
         }
-        //Toast.makeText(FileCreate.this, "ファイル保存に成功しました", Toast.LENGTH_LONG).show();
+        Toast.makeText(FileCreate.this, "ファイル保存に成功しました", Toast.LENGTH_LONG).show();
         MainActivity ma = new MainActivity();
         ma.reload();
     }

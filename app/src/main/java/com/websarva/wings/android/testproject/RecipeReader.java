@@ -1,25 +1,17 @@
 package com.websarva.wings.android.testproject;
 
-import androidx.activity.result.contract.ActivityResultContracts;
+
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
-import android.speech.SpeechRecognizer;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -107,11 +99,6 @@ public class RecipeReader extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         //処理のメインのメソッドを呼び出す
         speech();
-    }
-
-    public void shutdown() {
-        //ttsを終了させる処理を
-        tts.shutdown();
     }
 
     public void speech() {
